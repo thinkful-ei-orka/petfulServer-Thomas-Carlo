@@ -17,9 +17,20 @@ store.dogs.forEach(dog => pets.dogs.enqueue(dog))
 module.exports = {
   get() {
     // Return the pets next in line to be adopted.
+    const dog = pets.dogs.show();
+    const cat = pets.cats.show();
+
+    return [dog, cat]
   },
 
   dequeue(type) {
     // Remove a pet from the queue.
+    if(type.toLowerCase() === 'dog') {
+      return pets.dogs.dequeue();
+    } else if(type.toLowerCase() === 'cat') {
+      return pets.cats.dequeue();
+    } else {
+      return 'Error: Invalid Type.';
+    }
   }
 }
