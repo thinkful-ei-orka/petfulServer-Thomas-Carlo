@@ -18,4 +18,8 @@ router.post('/', json, (req, res) => {
   res.status(201).json(person);
 })
 
+router.delete('/', (req, res) => {
+  People.dequeue()
+  res.status(204).end()
+})
 module.exports = router
