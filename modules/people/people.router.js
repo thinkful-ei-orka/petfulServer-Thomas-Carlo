@@ -1,5 +1,7 @@
 const express = require('express')
-const json = require('body-parser').json()
+// const json = require('body-parser').json()
+
+const json = express.json()
 
 const People = require('./people.service')
 
@@ -10,9 +12,11 @@ router.get('/', (req, res) => {
   res.status(200).json(People.get());
 }) 
 
-router.post('/', json, (req, res) => {
+router
+  .route('/')
+  .post(json, (req, res) => {
   // Add a new person to the queue.
-  const { person } = res.body;
+  const { person } = req.body;
 
   People.enqueue(person);
   res.status(201).json(person);
