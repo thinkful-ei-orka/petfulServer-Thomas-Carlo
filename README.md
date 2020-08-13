@@ -2,9 +2,9 @@
 
 https://petful-tc.vercel.app/
 
-Link to client repo: https://github.com/thinkful-ei-orka/diwhy_client_404_TNNF
+Link to client repo: https://github.com/thinkful-ei-orka/petfulClient-Thomas-Carlo
 
-Link to server repo: https://github.com/thinkful-ei-orka/diwhy_server_404_TNNF
+Link to server repo: https://github.com/thinkful-ei-orka/petfulServer-Thomas-Carlo
 
 Thomas Davis and Carlo Paredes ('The Cootie Squad')
 
