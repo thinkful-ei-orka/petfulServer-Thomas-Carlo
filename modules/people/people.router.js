@@ -18,6 +18,8 @@ router
   // Add a new person to the queue.
   const { person } = req.body;
 
+  console.log(person);
+
   People.enqueue(person);
   res.status(201).json(person);
 })
