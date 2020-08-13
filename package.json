@@ -1,14 +1,23 @@
 {
   "name": "petful-server",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
+    "migrate:production": "heroku run npm run migrate",
+    "start": "node server.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.20.15",
     "nodemon": "^2.0.4",
-    "pg": "^7.18.2"
+    "pg": "^7.18.2",
+    "postgrator": "^4.0.1",
+    "postgrator-cli": "^4.0.0"
   }
 }

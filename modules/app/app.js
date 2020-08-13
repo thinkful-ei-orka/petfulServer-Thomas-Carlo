@@ -6,7 +6,7 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors({
-    origin: CLIENT_ORIGIN
+    CLIENT_ORIGIN
 }))
 
 app.use('/people', require('../people/people.router'))
